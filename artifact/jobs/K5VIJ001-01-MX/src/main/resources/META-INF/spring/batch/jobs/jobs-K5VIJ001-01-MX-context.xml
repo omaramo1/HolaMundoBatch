@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/batch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+    <job id="K5VIJ001-01-MX" incrementer="defaultIncrementer" job-repository="jobRepository">
+        <description>Mi primer job</description>
+        <listeners>
+            <listener ref="interceptorJobExecutionListener" />
+        </listeners>
+        <step id="readWriteCapacidades">
+            <tasklet>
+                <chunk reader="itemReader" writer="itemWriter" processor="itemProcessor" commit-interval="1000" />
+            </tasklet>
+        </step>
+    </job>
+    <step id="stepReadFile">
+        <tasklet ref="readTasklet" />
+        <listeners>
+            <listener ref="interceptorStepExecutionListener">
+            </listener>
+        </listeners>
+    </step>
+</beans:beans>
