@@ -215,6 +215,7 @@
 							org.springframework.batch.item;version="${osgi.version}",
 							org.springframework.batch.item.database;version="${osgi.version}",
 							org.springframework.batch.item.file;version="${osgi.version}",
+							org.springframework.batch.item.file.mapping;version="${osgi.version}",
 							org.springframework.batch.item.file.transform;version="${osgi.version}",
 							org.springframework.batch.support.transaction;version="${osgi.version}",
 							org.springframework.beans;version="${osgi.version}",

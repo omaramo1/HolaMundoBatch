@@ -24,7 +24,7 @@
    </bean>
 
    <bean id="itemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
-      <property name="resource" value="file:fichtemcomp/datent/"/>
+      <property name="resource" value="file:fichtemcomp/datsal/filtrado_capacidades.txt"/>
       <property name="lineAggregator">
          <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
             <property name="delimiter" value="|"/>
@@ -38,7 +38,7 @@
    </bean>
 
    <bean id="itemReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
-      <property name="resource" value="file:fichtemcomp/datent/ejemplo_capacidades.csv"/>
+      <property name="resource" value="file:fichtemcomp/datsal/ejemplo_capacidades.txt"/>
       <property name="lineMapper">
          <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
             <property name="lineTokenizer">

@@ -18,7 +18,7 @@ public class CapacityRecord {
     private String origin_type;
     private String moratorium_type;
     private String cmpgn_cust_prdt_fctr_curr_per;
-    private String codig_opertation_type;
+    private String codig_operation_type;
     private String account_id;
     private String account_card_id;
     private String access_channel_id;
@@ -159,12 +159,12 @@ public class CapacityRecord {
         this.cmpgn_cust_prdt_fctr_curr_per = cmpgn_cust_prdt_fctr_curr_per;
     }
 
-    public String getCodig_opertation_type() {
-        return codig_opertation_type;
+    public String getCodig_operation_type() {
+        return codig_operation_type;
     }
 
-    public void setCodig_opertation_type(String codig_opertation_type) {
-        this.codig_opertation_type = codig_opertation_type;
+    public void setCodig_operation_type(String codig_opertation_type) {
+        this.codig_operation_type = codig_opertation_type;
     }
 
     public String getAccount_id() {
